@@ -15,13 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
-            $table->string('subcategory');
-            $table->string('brand');
-            $table->string('model');
-            $table->string('description');
-            $table->float('price');
-            $table->string('image');
+            $table->foreignId('category_id');
+            $table->foreignId('subcategory_id');
+            $table->foreignId('brand_id');
+            $table->double('price')->default(0);
+            $table->boolean('stock')->default(1);
+            $table->text('description')->nullable();
+            $table->text('images')->nullable();
             $table->timestamps();
         });
     }
