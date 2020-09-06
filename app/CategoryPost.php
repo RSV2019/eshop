@@ -8,7 +8,7 @@ class CategoryPost extends Model
 {
     public function articles()
     {
-        return $this->hasMany('App\Article');
+        return $this->hasMany('App\Article','category_id');
 
     }
 }

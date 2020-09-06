@@ -41,6 +41,7 @@
                     </div>
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
+                    <h2>{{$cat->name}}</h2>
                     <div class="row">
                         @foreach ($articles as $article)
                             <div class="col-lg-6 col-sm-6">
@@ -49,7 +50,7 @@
                                         <img src="{{Voyager::image($article->cover)}}" alt="">
                                     </div>
                                     <div class="bi-text">
-                                    <a href="{{ url('/blog/article/'.$article->id)}}">
+                                        <a href="{{ url('/blog/article/'.$article->id)}}">
                                         <h4>{{$article->title}}</h4>
                                         </a>
                                         <p>{{$article->category->name}}<span>- May 19, 2019</span></p>
