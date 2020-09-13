@@ -22,10 +22,11 @@ route::post('/login','LoginController@login')->name('login');
 route::get('/profile','UserController@profile');
 route::get('/logout','UserController@logout')->name('logout');
 
-Route::get('/login/facebook','LoginController@redirectToFacebook');
-Route::get('/login/facebook/callback','LoginController@handleProviderCallback');
+route::get('/login/facebook','LoginController@redirectToFacebook');
+route::get('/login/facebook/callback','LoginController@handleProviderCallback');
 
-
+route::get('/confirmation','ConfirmationController@confirmationIndex');
+route::post('/confirmation','ConfirmationController@confirmation');
 
 
 

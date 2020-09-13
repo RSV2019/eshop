@@ -52,6 +52,7 @@ class LoginController extends Controller
             $u->email=$user->user["email"];
             $u->avatar=$user->avatar;
             $u->password=0;
+            $u->confirmed=1;
             $u->save();
             Auth::login($u);
             return redirect('/profile');
@@ -59,6 +60,7 @@ class LoginController extends Controller
             {
                 $user_exist->provider='Facebook';
                 $user_exist->provider_id=$user->id;
+                $user_exist->confirmed=1;
                 $user_exist->save();
                 Auth::login($user_exist);
                 return redirect('/profile');
