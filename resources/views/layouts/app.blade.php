@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+    @toastr_css
 </head>
 
 <body>
@@ -51,6 +52,8 @@
     <script src="{{ asset('js/jquery.slicknav.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    @toastr_js
+    @toastr_render
 </body>
 
 </html>
